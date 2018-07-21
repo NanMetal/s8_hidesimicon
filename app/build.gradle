@@ -1,0 +1,23 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "aaa.statusbar.hidesimicon"
+        minSdkVersion 26
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+    }
+
+    aaptOptions {
+        additionalParameters "--java", "test"
+    }
+}
+
+afterEvaluate {
+    generateDebugBuildConfig.enabled = false
+    generateReleaseBuildConfig.enabled = false
+}
